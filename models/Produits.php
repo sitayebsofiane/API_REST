@@ -49,7 +49,7 @@ class Produits{
     public function creer(){
 
         // Ecriture de la requête SQL en y insérant le nom de la table
-        $sql = "INSERT INTO " . $this->table . "(nom, prix, description, categories_id)VALUES(:nom,:prix,:description,:categories_id)";
+        $sql = "INSERT INTO " . $this->table . "(nom, prix, description, categories_id,created_at)VALUES(:nom,:prix,:description,:categories_id,:created_at)";
 
         // Préparation de la requête
         $query = $this->connexion->prepare($sql);
