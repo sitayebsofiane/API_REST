@@ -21,7 +21,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     // On récupère les informations envoyées
     $donnees = json_decode(file_get_contents("php://input"));
-    
     if(!empty($donnees->nom) && !empty($donnees->description) && !empty($donnees->prix) && !empty($donnees->categories_id)){
         // Ici on a reçu les données
         // On hydrate notre objet
