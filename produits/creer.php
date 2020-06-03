@@ -28,8 +28,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $produit->description = $donnees->description;
         $produit->prix = $donnees->prix;
         $produit->categories_id = $donnees->categories_id;
-        $produit->created_at = date(DATE_RFC2822);
-        
+        $produit->created_at = $donnees->created_at !=NULL?$donnees->created_at:date(DATE_RFC2822);
         if($produit->creer()){
             // Ici la création a fonctionné
             // On envoie un code 201

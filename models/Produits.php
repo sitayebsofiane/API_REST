@@ -123,11 +123,7 @@ class Produits{
         $query->bindParam(1, $this->id);
 
         // On exécute la requête
-        if($query->execute()){
-            return true;
-        }
-        
-        return false;
+            return $query->execute();
     }
 
     /**
